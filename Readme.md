@@ -1,6 +1,6 @@
 # Touchable #
 
-Touchable is a very lightweght jQuery Class that unifies touch and mouse events over different platforms like desktops and mobile devices with touchscrennes (like Android, iPad, iPod Touch, iPhone etc.)
+Touchable is a very lightweight jQuery Class that unifies touch and mouse events over different platforms like desktops and mobile devices with touchscrennes (like Android, iPad, iPod Touch, iPhone etc.)
 The name Touchable therefore might be a bit confusing, cause it actually is a generic "Touch" which involves also mouse events. For convenience they are all called "Touches".
 
 Touchable really doesn't depend that much on jQuery, so it should work with other libraries like [Zepto][] too. Havent tested that though.
