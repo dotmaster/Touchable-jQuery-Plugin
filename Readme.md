@@ -1,6 +1,6 @@
 # Touchable #
 
-Touchable is a jQuery Class that unifies touch and mouse events over different platforms like desktops and mobile devices with touchscrennes (like Android, iPad, iPod Touch, iPhone etc.)
+Touchable is a very lightweght jQuery Class that unifies touch and mouse events over different platforms like desktops and mobile devices with touchscrennes (like Android, iPad, iPod Touch, iPhone etc.)
 The name Touchable therefore might be a bit confusing, cause it actually is a generic "Touch" which involves also mouse events. For convenience they are all called "Touches".
 
 Touchable really doesn't depend that much on jQuery, so it should work with other libraries like [Zepto][] too. Havent tested that though.
@@ -8,10 +8,11 @@ Touchable really doesn't depend that much on jQuery, so it should work with othe
 
 ## Usage ##
 
-Right now Touchable supports four basic events, all events when bound with jQuery's bind function get a touch object passed in as second argument
+Right now Touchable supports five basic events, all events when bound with jQuery's bind function get a touch object passed in as second argument
 
 * **touchmove**: fired when the user touched or clicked with the mouse and moves to another position. Right now Touchable supports up to 2 fingers. If 2 fingers are on screen the lower left is taken as a reference.
 * **touchend**: fired when the user ended a touch
+* **Tap**: fired when the user clicks with his mouse or taps with his finger
 * **longTap**: fired when the user stays with his mouse or finger on an item for 1 second
 * **doubleTap**: fired when the user taps two times within half of a second
 
