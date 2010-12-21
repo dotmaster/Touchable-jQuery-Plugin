@@ -12,7 +12,6 @@ var Touchable;
 (function($) {
   $.fn.Touchable = function() {
       return this.each(function() {
-      // Do your awesome plugin stuff here
       return new Touchable(this);
     });
   }
@@ -36,13 +35,6 @@ var Touchable;
     //add touchstart eventlistener    
     elem.addEventListener('touchstart', touchstart, false);
     this.$elem.bind('mousedown', touchstart);
-    
-    function scrollTo(dx, dy){
-            var _m = self.$elem;
-            var x = _m.scrollLeft() + dx;
-            var y = _m.scrollTop() + dy;
-            _m.scrollLeft(x).scrollTop(y);
-    }
     
     function touchstart (e) {
       if(typeof e.touches!== "undefined")
