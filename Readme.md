@@ -10,10 +10,10 @@ Touchable really doesn't depend that much on jQuery, so it should work with othe
 
 Right now Touchable supports four basic events, all events when bound with jQuery's bind function get a touch object passed in as second argument
 
-* *touchmove*: fired when the user touched or clicked with the mouse and moves to another position. Right now Touchable supports up to 2 fingers. If 2 fingers are on screen the lower left is taken as a reference.
-* *touchend*: fired when the user ended a touch
-* *longTap*: fired when the user stays with his mouse or finger on an item for 1 second
-* *doubleTap*: fired when the user taps two times within half of a second
+* **touchmove**: fired when the user touched or clicked with the mouse and moves to another position. Right now Touchable supports up to 2 fingers. If 2 fingers are on screen the lower left is taken as a reference.
+* **touchend**: fired when the user ended a touch
+* **longTap**: fired when the user stays with his mouse or finger on an item for 1 second
+* **doubleTap**: fired when the user taps two times within half of a second
 
 
 you use it by initializing Touchable on a view element, like so:
