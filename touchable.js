@@ -8,14 +8,16 @@
  * @requires jQuery
  */
 
-var Touchable;
 (function($) {
   $.fn.Touchable = function() {
       return this.each(function() {
       return new Touchable(this);
     });
   }
-  Touchable = function (elem)
+  /**
+   * @constructor
+   */  
+  function Touchable(elem)
   {
     this.elem=elem;    
     this.$elem=$(elem);
@@ -29,7 +31,7 @@ var Touchable;
     this.currentDelta={x:0,y:0};//measured from previous move event
     this.currentStartDelta={x:0,y:0}; //measured from start   
     this.currentPosition={x:0,y:0};
-    this.doubleTapTimer, this.longTapTimer;
+    this.doubleTapTimer=null, this.longTapTimer=null;
 
     var self=this;
     //add touchstart eventlistener    
