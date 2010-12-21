@@ -1,6 +1,6 @@
 <h1>Touchable</h1>
 
-<p>Touchable is a very lightweght jQuery Class that unifies touch and mouse events over different platforms like desktops and mobile devices with touchscrennes (like Android, iPad, iPod Touch, iPhone etc.)
+<p>Touchable is a very lightweight jQuery Class that unifies touch and mouse events over different platforms like desktops and mobile devices with touchscrennes (like Android, iPad, iPod Touch, iPhone etc.)
 The name Touchable therefore might be a bit confusing, cause it actually is a generic "Touch" which involves also mouse events. For convenience they are all called "Touches".</p>
 
 <p>Touchable really doesn't depend that much on jQuery, so it should work with other libraries like <a href="http://zeptojs.com/">Zepto</a> too. Havent tested that though.</p>
@@ -17,11 +17,17 @@ The name Touchable therefore might be a bit confusing, cause it actually is a ge
 <li><strong>doubleTap</strong>: fired when the user taps two times within half of a second</li>
 </ul>
 
-<p>you use it by initializing Touchable on a view element, like so:
-    var div = $(<div>).Touchable();
-then you bind to the events
-    div.bind('touchmove', function(e, touch){})
-notice, that each event gets passed a touch object, besides the normal event object. The Touch object has the following properties:</p>
+<p>you use it by initializing Touchable on a view element, like so:</p>
+
+<pre><code>var div = $(&lt;div&gt;).Touchable();
+</code></pre>
+
+<p>then you bind to the events</p>
+
+<pre><code>div.bind('touchmove', function(e, touch){})
+</code></pre>
+
+<p>notice, that each event gets passed a touch object, besides the normal event object. The Touch object has the following properties:</p>
 
 <ul>
 <li>startTouch: this is where the touch or mousedown event originated</li>
