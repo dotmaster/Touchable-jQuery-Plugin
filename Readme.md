@@ -13,13 +13,14 @@ It introduces a new event called
 
 * **newHover(2)**: following my [blog][] article about UI design and my postulate, that Long Tap is the new Hover. Fired when the user hovers with the mouse or longTaps an element. Hovever if you want to you can set it up to a touchmove event too, which will fire a genericHover2 event.
 
+[blog]:http://grenzgenial.com/post/2429017479/longtap-is-the-new-hover
 
 ##Testing##
 right now I have tested Touchable on the following devices and browsers Chrome, Firefox, Safari, iPad Simulator, iPad, iPhone. But it should work quite everywhere. If you have any bug notes drop me a line.
 
 ##Demo##
-I have setup a demo site for Hoverable on [connect-mi.com][]
-[connect-mi.com]: http://connect-mi.com/
+I have setup a demo site for Hoverable on the [github page][]
+[github page]: http://dotmaster.github.com/Touchable-jQuery-Plugin/demo/demo.html
 
 ## Usage ##
 
