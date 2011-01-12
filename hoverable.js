@@ -39,7 +39,7 @@
 
     this.elem=elem;    
     //test for touchable
-    $(elem).Touchable || throw new Error('Hoverable depends on Touchable! Please be sure to include Touchable in your project.')
+    if(!$(elem).Touchable) throw new Error('Hoverable depends on Touchable! Please be sure to include Touchable in your project.')
     $(elem).Touchable();
 
     this.inHover=false;
