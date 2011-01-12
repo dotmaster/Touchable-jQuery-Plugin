@@ -1,4 +1,4 @@
-# NEW!!! NOW WORKING ENEN ON F****N IE 7/8 #
+# NEW!!! NOW WORKING EVEN ON IE 7/8 #
 
 # Touchable #
 
