@@ -11,9 +11,10 @@ The name Touchable therefore might be a bit confusing, cause we actually generat
 It introduces a new event called </p>
 
 <ul>
-<li><strong>newHover(2)</strong>: following my <a href="http://grenzgenial.com/post/2429779568/longtap-is-the-new-hover">blog article</a> about UI design and my postulate, that Long Tap is the new Hover. Fired when the user hovers with the mouse or longTaps an element. Hovever if you want to you can set it up to a touchmove event too, which will fire a genericHover2 event.
-<h2>Testing</h2></li>
+<li><strong>newHover(2)</strong>: following my <a href="http://grenzgenial.com/post/2429779568/longtap-is-the-new-hover">blog article</a> about UI design and my postulate, that Long Tap is the new Hover. Fired when the user hovers with the mouse or longTaps an element. Hovever if you want to you can set it up to a touchmove event too, which will fire a genericHover2 event.</li>
 </ul>
+
+<h2>Testing</h2>
 
 <p>right now I have tested Touchable on the following devices and browsers Chrome, Firefox, Safari, iPad Simulator, iPad, iPhone. But it should work quite everywhere. If you have any bug notes drop me a line.</p>
 
@@ -32,10 +33,13 @@ It introduces a new event called </p>
 <li><strong>touchableend</strong>: fired when the user ended a touch</li>
 <li><strong>tap</strong>: fired when the user clicks with his mouse or taps with his finger</li>
 <li><strong>longTap</strong>: fired when the user stays with his mouse or finger on an item for 1 second</li>
-<li><p><strong>doubleTap</strong>: fired when the user taps two times within half of a second</p>
+<li><strong>doubleTap</strong>: fired when the user taps two times within half of a second</li>
+</ul>
 
-<h1>HOVERABLE</h1></li>
-<li><p><strong>newHover(2)</strong>: Fired when the user hovers with the mouse or longTaps an element. Hovever if you want to you can set it up to a touchmove event too, which will fire a newHover2 event.</p></li>
+<h1>HOVERABLE</h1>
+
+<ul>
+<li><strong>newHover(2)</strong>: Fired when the user hovers with the mouse or longTaps an element. Hovever if you want to you can set it up to a touchmove event too, which will fire a genericHover2 event.</li>
 </ul>
 
 <p>you use it by initializing Touchable on a view element, like so:</p>
@@ -69,4 +73,3 @@ div.bind('newHover2', function in(e, touch){}, function out(e, touch){})
 <ul>
 <li>support more gestures like swiping,...</li>
 </ul>
-
