@@ -4,7 +4,7 @@
  * Simplified BSD License (@see License)
  * @author        Gregor Schwab
  * @copyright     (c) 2010 Gregor Schwab
- * Usage Command Line: $(elem).Touchable() (@see Readme.md)
+ * Usage: $(elem).Touchable() (@see Readme.md)
  * @requires jQuery Touchable
  */
 
@@ -32,18 +32,19 @@
   function Hoverable(elem, conf)
   {
     
+    var self=this; 
     this.logging=false; //set to false to disabele logging default false gets overwritten by conf see below
     var log=function(a){if(self.logging){console.log(arguments);}} ;//private logging function
     
 
     this.elem=elem;    
-    try{this.$elem=$(elem).Touchable();}catch(e){console.log('Hoverable depends on Touchable! Please be sure to include Touchable in your project.')}
-
+    //test for touchable
+    $(elem).Touchable || throw new Error('Hoverable depends on Touchable! Please be sure to include Touchable in your project.')
+    $(elem).Touchable();
 
     this.inHover=false;
     this.target=null;
 
-    var self=this; 
     
     if (typeof conf!=='undefined'){
       if(typeof conf.disableHover!=='undefined'){this.disableHover=conf.disableHover;}

@@ -59,6 +59,9 @@
      if (typeof conf!=='undefined'){
        if(typeof conf.logging!=='undefined'){this.logging=conf.logging;}   
      }     
+     //make IE happy
+     elem.addEventListener=elem.addEventListener||elem.attachEvent
+     elem.removeEventListener = elem.removeEventListener||elem.detachEvent   
      //add touchstart eventlistener    
      elem.addEventListener('touchstart', function(){self.$elem.trigger('touchstart')}, false);    
      elem.addEventListener('touchend', function(){self.$elem.trigger('touchend')}, false);
