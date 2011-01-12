@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $t=$('#Touchable').Hoverable();
+  $t=$('#Touchable').Hoverable({logging:true});
   $t2=$('#Touchable2').Hoverable();  
   $t3=$('#Touchable3').Hoverable({disableHover:true});
   $t4=$('#Touchable4').Hoverable({disableHover:true});
