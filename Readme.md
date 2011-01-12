@@ -1,3 +1,5 @@
+# NEW!!! NOW WORKING ENEN ON F****N IE 7/8 #
+
 # Touchable #
 
 Touchable is a very lightweight (1,96kb) jQuery Class that unifies touch and mouse events over different platforms like desktops and mobile devices with touchscreens (like Android, iPad, iPod Touch, iPhone etc.)
@@ -8,7 +10,7 @@ Touchable really doesn't depend that much on jQuery, so it should work with othe
 
 # Hoverable #
 
-Hoverable is built upon Touchable and is a very lightweight (1,57kB / 3,04together with Touchable) jQuery Class that unifies hover events over different platforms like desktops and mobile devices with touchscreens (like Android, iPad, iPod Touch, iPhone etc.)
+Hoverable is built upon Touchable and is a very lightweight (1,57kB / 3,04 together with Touchable) jQuery Class that unifies hover events over different platforms like desktops and mobile devices with touchscreens (like Android, iPad, iPod Touch, iPhone etc.)
 It introduces a new event called 
 
 * **newHover(2)**: following my [blog article][] about UI design and my postulate, that Long Tap is the new Hover. Fired when the user hovers with the mouse or longTaps an element. Hovever if you want to you can set it up to a touchmove event too, which will fire a genericHover2 event.
