@@ -64,11 +64,11 @@
      var addEventListener=elem.addEventListener||elem.attachEvent
      var removeEventListener = elem.removeEventListener||elem.detachEvent   
      //add touchstart eventlistener    
-     addEventListener('touchstart', function(){self.$elem.trigger('touchstart')}, false);    
-     addEventListener('touchend', function(){self.$elem.trigger('touchend')}, false);
-     addEventListener('touchmove', function(){self.$elem.trigger('touchmove')}, false);   
+     addEventListener.call(elem, 'touchstart', function(){self.$elem.trigger('touchstart')}, false);    
+     addEventListener.call(elem, 'touchend', function(){self.$elem.trigger('touchend')}, false);
+     addEventListener.call(elem, 'touchmove', function(){self.$elem.trigger('touchmove')}, false);   
 
-     addEventListener('touchstart', touchstart, false);    
+     addEventListener.call(elem, 'touchstart', touchstart, false);    
      this.$elem.mousedown(touchstart);
 
      function touchstart (e) {

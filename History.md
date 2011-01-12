@@ -6,7 +6,7 @@
 
 
 
-0.0.2 / 2010-01-11
+0.0.3 / 2010-01-11
 ------------------
 
 * Fixed bug with addEventListener not working in IE
