@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  $t=$('#Touchable').Hoverable({logging:true});
+  $t=$('#Touchable').Hoverable();
   $t2=$('#Touchable2').Hoverable();  
   $t3=$('#Touchable3').Hoverable({disableHover:true});
   $t4=$('#Touchable4').Hoverable({disableHover:true});
-
+  $('.touchme').mousedown(function(){alert('sdadas')});
   $t.newHover(function(e, touch){ //hoverIN
     $tooltip=$(this).find('.tooltip');
     $tooltip.show();
