@@ -69,7 +69,7 @@
      elem.addEventListener('touchmove', function(){self.$elem.trigger('touchmove')}, false);   
 
      elem.addEventListener('touchstart', touchstart, false);    
-     this.$elem.bind('mousedown', touchstart);
+     this.$elem.mousedown(touchstart);
 
      function touchstart (e) {
        if(typeof e.touches!== "undefined")

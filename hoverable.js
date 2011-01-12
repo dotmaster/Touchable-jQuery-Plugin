@@ -55,8 +55,8 @@
      
     //longTap is the new Hover ;)
     if (!this.disableHover){
-      this.$elem.bind('mouseenter', genericHover);
-      this.$elem.bind('mouseleave', genericHover);      
+      this.$elem.mouseenter(genericHover);
+      this.$elem.bind.mouseleave(genericHover);      
     }
 
    
