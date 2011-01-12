@@ -37,6 +37,8 @@ var add = function(command){
   oldCommand = command;
 };
 
+process.chdir('.');
+console.log('Working directory: ' + process.cwd());
 add('git checkout gh-pages');
 add('nmd Readme.md -o index.html');      
 add('ln -s hoverable.js demo/hoverable.js');

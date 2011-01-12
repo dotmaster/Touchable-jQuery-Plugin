@@ -5,7 +5,7 @@
   
       //Create Express frontend
 var server = global.server = express.createServer();
-server.use(connect.staticProvider(__dirname));
+server.use(connect.staticProvider(__dirname+'/..'));
 server.use(express.errorHandler({ dumpExceptions: true, showStack: true }));                  
 
 

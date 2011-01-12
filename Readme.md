@@ -1,6 +1,6 @@
 # Touchable #
 
-Touchable is a very lightweight (3,12kb) jQuery Class that unifies touch and mouse events over different platforms like desktops and mobile devices with touchscreens (like Android, iPad, iPod Touch, iPhone etc.)
+Touchable is a very lightweight (1,96kb) jQuery Class that unifies touch and mouse events over different platforms like desktops and mobile devices with touchscreens (like Android, iPad, iPod Touch, iPhone etc.)
 The name Touchable therefore might be a bit confusing, cause we actually generate a generic "Touch" which involves also mouse events. For convenience they are all called "Touches".
 
 Touchable really doesn't depend that much on jQuery, so it should work with other libraries like [Zepto][] too. Havent tested that though.
@@ -8,7 +8,7 @@ Touchable really doesn't depend that much on jQuery, so it should work with othe
 
 # Hoverable #
 
-Hoverable is built upon Touchable and is a very lightweight (1,7kB) jQuery Class that unifies hover events over different platforms like desktops and mobile devices with touchscreens (like Android, iPad, iPod Touch, iPhone etc.)
+Hoverable is built upon Touchable and is a very lightweight (1,57kB / 3,04together with Touchable) jQuery Class that unifies hover events over different platforms like desktops and mobile devices with touchscreens (like Android, iPad, iPod Touch, iPhone etc.)
 It introduces a new event called 
 
 * **newHover(2)**: following my [blog article][] about UI design and my postulate, that Long Tap is the new Hover. Fired when the user hovers with the mouse or longTaps an element. Hovever if you want to you can set it up to a touchmove event too, which will fire a genericHover2 event.
@@ -18,7 +18,7 @@ It introduces a new event called
 right now I have tested Touchable on the following devices and browsers Chrome, Firefox, Safari, iPad Simulator, iPad, iPhone, Internet Explorer 7/8. But it should work quite everywhere. If you have any bug notes drop me a line.
 
 ##Demo##
-I have setup a demo site for Hoverable on the [github page][]
+I have setup a demo site for Hoverable on the [github page][]. View source to see how everything works.
 [github page]: http://dotmaster.github.com/Touchable-jQuery-Plugin/demo/demo.html
 
 ## Usage ##

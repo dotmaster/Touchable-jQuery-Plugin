@@ -5,7 +5,7 @@
  * @author        Gregor Schwab
  * @copyright     (c) 2010 Gregor Schwab
  * Usage Command Line: $(elem).Touchable() (@see Readme.md)
- * @version 0.0.1
+ * @version 0.0.2
  * @requires jQuery
  */
 
