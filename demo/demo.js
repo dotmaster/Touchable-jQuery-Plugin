@@ -3,7 +3,10 @@ $(document).ready(function(){
   $t2=$('#Touchable2').Hoverable();  
   $t3=$('#Touchable3').Hoverable({disableHover:true});
   $t4=$('#Touchable4').Hoverable({disableHover:true});
-  $('.touchme').mousedown(function(){alert('sdadas')});
+  $link= $('#Touchable3 a').click(function(e){
+    //e.preventDefault()
+    //location.href=$(this).attr('href')
+    });
   $t.newHover(function(e, touch){ //hoverIN
     $tooltip=$(this).find('.tooltip');
     $tooltip.show();

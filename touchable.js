@@ -5,7 +5,7 @@
  * @author        Gregor Schwab
  * @copyright     (c) 2010 Gregor Schwab
  * Usage Command Line: $(elem).Touchable() (@see Readme.md)
- * @version 0.0.2
+ * @version 0.0.3
  * @requires jQuery
  */
 
@@ -110,7 +110,9 @@
    				$(document).mousemove(touchmove);
    				$(document).mouseup(touchend);  							  
   		}
-  		e.preventDefault();
+  		//don't shallow links, but all the rest
+  		if(!(e.currentTarget===self.$elem.get(0)))  e.preventDefault()
+
 
   		//setup double tapping 
   		if (!self.inDoubleTap) {

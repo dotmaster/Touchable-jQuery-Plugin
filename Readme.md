@@ -63,7 +63,10 @@ notice, that each event gets passed a touch object, besides the normal event obj
 * previousTouch: for internal calculations of the previous position of the mouse pointer or finger, used for deltas see below
 * currentDelta: measured from previous move event
 * currentStartDelta, currentPosition: the relative position, measured from start calculated in different ways, but should be the same
-
+**Event targets:**
+----------------
+* currentTarget: the event target element (may differ on mobile browsers from the ctarget element)
+* target: the event target element
 
 ## Todos ##
 
