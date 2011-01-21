@@ -11,3 +11,12 @@
 <li>merged with branch gh-pages</li>
 <li>Made anchor links not preventDefault by default on touchstart event (affected mobile safari not firing click events on anchor elements)</li>
 </ul>
+
+<h2>0.0.4 / 2010-01-21</h2>
+
+<ul>
+<li>reengineered the anchor link fix, cause I didn't like the approach taken in 0.0.3. The approach in 0.0.3 fixed the problem not at it's source, namely the browser inconsistency on mobile devices, which seem to mis-interpretate preventDefault as a stopPropagation, thus not fireing any other events bound to that object. This was not affectin only Anchor Elements, so I decided to let touchstart again prevent default, and included instead a special fix for mobile browsers in that I fire a click event on touchend manually. Don't know if this is a better fix, but it seems a bit more elegant to me right now. </li>
+<li>added hittarget to touch event: as mobile browsers results on event targets differ from desktop, I added a 3rd target which is evaluated by using document.elementFromPoint and especially oin mobile Safari gives the right touch target (whereas currentTarget and Target won't</li>
+<li>fixed the logging function</li>
+<li>pass the options passed to Hoverable to the internal Touchable object too</li>
+</ul>
