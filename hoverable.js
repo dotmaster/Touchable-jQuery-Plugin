@@ -5,7 +5,7 @@
  * @author        Gregor Schwab
  * @copyright     (c) 2010 Gregor Schwab
  * Usage: $(elem).Touchable() (@see Readme.md)
- * @version 0.0.3
+ * @version 0.0.4
  * @requires jQuery Touchable
  */
 
@@ -35,13 +35,14 @@
     
     var self=this; 
     this.logging=false; //set to false to disabele logging default false gets overwritten by conf see below
-    var log=function(a){if(self.logging){console.log(arguments);}} ;//private logging function
-    
+    var log=function(a){if(self.logging && (typeof console !== 'undefined')){
+       console.log(Array.prototype.slice.call(arguments));}
+       }; //private logging function  
 
     this.elem=elem;    
     //test for touchable
     if(!$(elem).Touchable) throw new Error('Hoverable depends on Touchable! Please be sure to include Touchable in your project.')
-    this.$elem=$(elem).Touchable();
+    this.$elem=$(elem).Touchable(conf);
 
     this.inHover=false;
     this.target=null;
@@ -103,8 +104,8 @@
       } 
       if (e.type == 'touchablemove'){
         if(touch instanceof Touchable){
-          var x=touch.currentTouch.x; var y=touch.currentTouch.y;  
-          var hitTarget = document.elementFromPoint(x, y);
+          //var x=touch.currentTouch.x; var y=touch.currentTouch.y;  
+          var hitTarget = self.hitTarget; //document.elementFromPoint(x, y);
  /*         if(typeof hitTarget==='undefined'||hitTarget===null&&self.target!==null) {var target=self.target;var currentTarget=self.target}//just if the browser looses memory
           else{var target=hittarget}//first the hittarget
           if(self.logging){console.log('target '+target+' x, y:'+x,+' ' +y);}           

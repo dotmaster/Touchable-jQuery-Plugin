@@ -5,7 +5,7 @@
  * @author        Gregor Schwab
  * @copyright     (c) 2010 Gregor Schwab
  * Usage Command Line: $(elem).Touchable() (@see Readme.md)
- * @version 0.0.3
+ * @version 0.0.4
  * @requires jQuery
  */
 
@@ -39,7 +39,9 @@
    {
  
      this.logging=false; //set to false to disabele logging gets overwritten by conf see below
-     var log=function(a){if(self.logging){console.log(arguments);}} ;//private logging function
+     var log=function(a){if(self.logging && (typeof console !== 'undefined')){
+        console.log(Array.prototype.slice.call(arguments));}
+        }; //private logging function
      
      this.elem=elem;    
      this.$elem=$(elem);
@@ -64,7 +66,7 @@
      var addEventListener=elem.addEventListener||elem.attachEvent
      var removeEventListener = elem.removeEventListener||elem.detachEvent   
      //add touchstart eventlistener    
-     addEventListener.call(elem, 'touchstart', function(){self.$elem.trigger('touchstart')}, false);    
+     addEventListener.call(elem, 'touchstart', function(){self.$elem.trigger('touchstart')}, true);    
      addEventListener.call(elem, 'touchend', function(){self.$elem.trigger('touchend')}, false);
      addEventListener.call(elem, 'touchmove', function(){self.$elem.trigger('touchmove')}, false);   
 
@@ -111,7 +113,12 @@
    				$(document).mouseup(touchend);  							  
   		}
   		//don't shallow links, but all the rest
-  		if(!(e.currentTarget===self.$elem.get(0)))  e.preventDefault()
+  		self.target=e.target;//some browser loose the info here
+      self.currentTarget=e.currentTarget;//some browser loose the info here so save it for later
+      var x=self.startTouch.x; var y=self.startTouch.y;  
+      self.hitTarget = ( document.elementFromPoint ) ? (document.elementFromPoint(x, y)):'';  
+  		//if (self.hitTarget && !(self.hitTarget instanceof HTMLAnchorElement) &&!(e.currentTarget instanceof HTMLAnchorElement)) 
+  		  e.preventDefault()
 
 
   		//setup double tapping 
@@ -132,7 +139,7 @@
   		//setup long tapping and long mousedown
   		//setup a timer
   	  self.longTapTimer = setTimeout(function() {
-  	    log('Touchable longTap');
+  	    log('Touchable longTap'/*, self.hitTarget, self.target, self.currentTarget, self.elem*/);
   		  $(self.elem).trigger('longTap', self); //trigger a longTap
   		}, 1000);
 
@@ -184,9 +191,12 @@
   		//reset the start position for the next delta
   		self.previousTouch.x = self.currentTouch.x;
   		self.previousTouch.y = self.currentTouch.y;
-       log('Touchable Touchablemove self e.target' + e.target + 'e.currentTarget '+ e.currentTarget +' x:'+ self.currentStartDelta.x);            
+       log('Touchable Touchablemove self e.target' + e.target + 'e.currentTarget '+ e.currentTarget +' x:'+ self.currentStartDelta.x);      
+       //Target handling      
        self.target=e.target;//some browser loose the info here
-       self.currentTarget=e.currentTarget;//some browser loose the info here      
+       self.currentTarget=e.currentTarget;//some browser loose the info here so save it for later
+      var x=self.currentTouch.x; var y=self.currentTouch.y;  
+       self.hitTarget = ( document.elementFromPoint ) ? (document.elementFromPoint(x, y)):'';           
        $(self.elem).trigger('touchablemove', self);
 
   		//clear the long tap timer on mousemove
@@ -209,7 +219,9 @@
    		if (self.longTapTimer) clearTimeout(self.longTapTimer);  			
        log('Touchable Touchend self ' + self.currentStartDelta.x);              			
        $(self.elem).trigger('touchableend', self);
-  		log('Touchable: touchableend');
+  		 log('Touchable: touchableend');
+       $(self.hitTarget).trigger('click', self);//trigger a click on the hittarget cause on iPad/Mobile Safari preventdefault seems to shallow click events 
+  		 log('Touchable: Hittarget click');  		 
 
   	}      
    }

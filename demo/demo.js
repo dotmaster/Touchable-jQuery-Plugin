@@ -1,12 +1,14 @@
 $(document).ready(function(){
   $t=$('#Touchable').Hoverable();
   $t2=$('#Touchable2').Hoverable();  
-  $t3=$('#Touchable3').Hoverable({disableHover:true});
+  /*$link= $('#Touchable3 a').click(function(e){
+    e.preventDefault()
+    alert('sdasa')
+    location.href=$(this).attr('href')
+    });*/
+  $t3=$('#Touchable3').Hoverable({disableHover:true, logging:true});
   $t4=$('#Touchable4').Hoverable({disableHover:true});
-  $link= $('#Touchable3 a').click(function(e){
-    //e.preventDefault()
-    //location.href=$(this).attr('href')
-    });
+
   $t.newHover(function(e, touch){ //hoverIN
     $tooltip=$(this).find('.tooltip');
     $tooltip.show();

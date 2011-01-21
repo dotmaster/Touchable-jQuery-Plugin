@@ -257,7 +257,10 @@
    				$(document).mouseup(touchend);  							  
   		}
   		//don't shallow links, but all the rest
-  		if(!(e.currentTarget===self.$elem.get(0)))  e.preventDefault()
+      var x=self.startTouch.x; var y=self.startTouch.y;  
+      var hitTarget = ( document.elementFromPoint ) ? (document.elementFromPoint(x, y)):'';  
+  		if (hitTarget && !(hitTarget instanceof HTMLAnchorElement) &&!(e.currentTarget instanceof HTMLAnchorElement)) 
+  		  e.preventDefault()
 
 
   		//setup double tapping 
@@ -360,3 +363,4 @@
   	}      
    }
 })(jQuery);//end closure
+

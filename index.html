@@ -1,3 +1,5 @@
+<h1>NEW!!! NOW WORKING EVEN ON IE 7/8</h1>
+
 <h1>Touchable</h1>
 
 <p>Touchable is a very lightweight (1,96kb) jQuery Class that unifies touch and mouse events over different platforms like desktops and mobile devices with touchscreens (like Android, iPad, iPod Touch, iPhone etc.)
@@ -7,7 +9,7 @@ The name Touchable therefore might be a bit confusing, cause we actually generat
 
 <h1>Hoverable</h1>
 
-<p>Hoverable is built upon Touchable and is a very lightweight (1,57kB / 3,04together with Touchable) jQuery Class that unifies hover events over different platforms like desktops and mobile devices with touchscreens (like Android, iPad, iPod Touch, iPhone etc.)
+<p>Hoverable is built upon Touchable and is a very lightweight (1,57kB / 3,04 together with Touchable) jQuery Class that unifies hover events over different platforms like desktops and mobile devices with touchscreens (like Android, iPad, iPod Touch, iPhone etc.)
 It introduces a new event called </p>
 
 <ul>
@@ -66,6 +68,13 @@ div.bind('newHover2', function in(e, touch){}, function out(e, touch){})
 <li>previousTouch: for internal calculations of the previous position of the mouse pointer or finger, used for deltas see below</li>
 <li>currentDelta: measured from previous move event</li>
 <li>currentStartDelta, currentPosition: the relative position, measured from start calculated in different ways, but should be the same</li>
+</ul>
+
+<h2><strong>Event targets:</strong></h2>
+
+<ul>
+<li>currentTarget: the event target element (may differ on mobile browsers from the ctarget element)</li>
+<li>target: the event target element</li>
 </ul>
 
 <h2>Todos</h2>
