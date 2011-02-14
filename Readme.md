@@ -70,4 +70,5 @@ notice, that each event gets passed a touch object, besides the normal event obj
 
 ## Todos ##
 
+* make long tap independent from Touchable
 * support more gestures like swiping,...
