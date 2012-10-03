@@ -17,7 +17,7 @@ It introduces a new event called
 [blog article]:http://grenzgenial.com/post/2429779568/longtap-is-the-new-hover
 
 ##Testing##
-right now I have tested Touchable on the following devices and browsers Chrome, Firefox, Safari, iPad Simulator, iPad, iPhone, Internet Explorer 7/8. But it should work quite everywhere. If you have any bug notes drop me a line.
+Right now I have tested Touchable on the following devices and browsers Chrome, Firefox, Safari, iPad Simulator, iPad, iPhone, Internet Explorer 7/8. But it should work quite everywhere. If you have any bug notes drop me a line.
 
 ##Demo##
 I have setup a demo site for Hoverable on the [github page][]. View source to see how everything works.
@@ -48,7 +48,7 @@ you use it by initializing Touchable on a view element, like so:
 
 or
 
-    var div = $(<div>).Hoverable(); //which cretaes a Touchable internally
+    var div = $(<div>).Hoverable(); // which creates a Touchable internally
     
 then you bind to the events
 
