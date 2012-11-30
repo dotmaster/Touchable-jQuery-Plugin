@@ -330,6 +330,12 @@
 				
 			}
 			
+			if(typeof conf.preventClick!=='undefined'){
+				
+				this.preventClick=conf.preventClick;
+				
+			}
+			
 		}
 			
 		this.$elem.bind('touchstart', function(e){
@@ -344,6 +350,12 @@
 		});
 		this.$elem.bind('touchmove', touchmove);
 		this.$elem.bind('touchend', touchend);
+		
+		if (this.preventClick) {
+			this.$elem.bind('click', function (e) {
+				e.preventDefault();
+			});
+		}
 
     }
     
