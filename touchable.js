@@ -15,7 +15,7 @@
 		
 		return this.each(function() {
 			
-			var t= $(this).data['Touchable']=new Touchable(this, conf);
+			var t= $(this).data('Touchable', new Touchable(this, conf));
 			return t;
 			
 		});
